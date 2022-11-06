@@ -1,5 +1,7 @@
 # CarbonO
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0c2e3fa137b749d6a4df28ce33bf79e4)](https://app.codacy.com/gh/Chen-ZhaoXing/CarbonO?utm_source=github.com&utm_medium=referral&utm_content=Chen-ZhaoXing/CarbonO&utm_campaign=Badge_Grade_Settings)
+
 ![alt text](http://localhost:3002/static/media/Logo.adc3ee63fee3907bc799.png)
 
 > Project By: SMU CS203 G2T2
