@@ -64,7 +64,7 @@ CarbonO is an application whereby users can claim e-credits when they consume fo
 $ git clone https://github.com/Chen-ZhaoXing/CarbonO.git 
 ```
 ### Spring Boot Microservices
-```bash
+
 **Launching the microservices as individual containers locally **
 Change directory to where each microservice spring application is located and run the application file.
 
@@ -83,9 +83,8 @@ docker run -d -p 8082:8082 --name carbonTracker <yourDockerName>/carbontracker:0
 docker run -d -p 8083:8083 --name userReward <yourDockerName>/userreward:0.0.1-SNAPSHOT
 
 
-```
 ### React Application
-```bash
+```base
 $ cd client
 $ npm install
 $ npm start
