@@ -65,6 +65,23 @@ $ git clone https://github.com/Chen-ZhaoXing/CarbonO.git
 ```
 ### Spring Boot Microservices
 ```bash
+**Launching the microservices as individual containers locally **
+Change directory to where each microservice spring application is located and run the application file.
+
+**Launching the microservices as individual containers using docker **
+Change directory to each microservice folder on any IDE and build the image to docker hub.
+Example to build user microservice on intellij, in the terminal type the following:
+PS C:/(Your Directory)/CarbonO>cd carbonO/user
+Edit the pom.xml file, by replacing the docker file maven plugin configuration with <yourDockerName>/user
+PS C:/(Your Directory)/CarbonO/carbonO/user>mvn clean package -D dockerfile.useMavenSettingsForAuth=true dockerfile:push
+
+Now on your on your OS command prompt type the following to run the container:
+docker run -d -p 8081:8081 --env CARBONO_USERNAME=<STMP_Email> --env CARBONO_PASSWORD=<STMP_password> --name user <yourDockerName>/user:0.0.1-SNAPSHOT 
+docker run -d -p 8080:8080 --name api-gateway <yourDockerName>/api-gateway:0.0.1-SNAPSHOT
+docker run -d -p 8761:8761 --name eureka-server <yourDockerName>/eureka-server:0.0.1-SNAPSHOT
+docker run -d -p 8082:8082 --name carbonTracker <yourDockerName>/carbontracker:0.0.1-SNAPSHOT
+docker run -d -p 8083:8083 --name userReward <yourDockerName>/userreward:0.0.1-SNAPSHOT
+
 
 ```
 ### React Application
